@@ -17,5 +17,8 @@ public class LoginActivity extends AppCompatActivity{
         ActivityLoginBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
         LoginViewModel viewModel = ViewModelProviders.of(this).get(LoginViewModel.class);
         binding.setViewModel(viewModel);
+        viewModel.getLoginPrompt().observe(this, observe -> {
+            binding.tvPrompt.setText(observe);
+        });
     }
 }

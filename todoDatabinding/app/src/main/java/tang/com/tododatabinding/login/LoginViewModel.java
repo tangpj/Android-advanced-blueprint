@@ -19,6 +19,7 @@ public class LoginViewModel extends ViewModel {
 
     private final ObservableField<Boolean> isLoading = new ObservableField<>(false);
     private final ObservableField<Account> account = new ObservableField<>();
+    private final MutableLiveData<String> loginPrompt = new MutableLiveData<>();
 
     public LoginViewModel(){
         account.set(new Account("",""));
@@ -29,6 +30,7 @@ public class LoginViewModel extends ViewModel {
                 + "\npassword = " + Objects.requireNonNull(account.get()).getPassword().get();
         Log.d(TAG,"正在登陆中....\n"
                + loginMsg);
+        loginPrompt.postValue("正在登陆账号：" + Objects.requireNonNull(account.get()).getAccountNum().get());
         isLoading.set(true);
             new Handler().postDelayed(() -> {
                 Log.d(TAG,"登陆成功....\n");
@@ -36,7 +38,7 @@ public class LoginViewModel extends ViewModel {
                 Intent intent = new Intent(view.getContext(), MainActivity.class);
                 intent.putExtra("hello", loginMsg);
                 view.getContext().startActivity(intent);
-            }, 2000);
+            }, 3000);
 
     }
 
@@ -46,5 +48,9 @@ public class LoginViewModel extends ViewModel {
 
     public Account getAccount(){
         return account.get();
+    }
+
+    public LiveData<String> getLoginPrompt() {
+        return loginPrompt;
     }
 }
