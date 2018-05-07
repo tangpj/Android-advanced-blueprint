@@ -14,7 +14,7 @@ public class LoginViewModel extends ViewModel {
 
     private static final String TAG = "LoginViewModel";
 
-    private final ObservableField<Boolean> isLoading = new ObservableField<>();
+    private final ObservableField<Boolean> isLoading = new ObservableField<>(false);
     private final ObservableField<Account> account = new ObservableField<>();
 
     public LoginViewModel(){
@@ -22,11 +22,12 @@ public class LoginViewModel extends ViewModel {
     }
 
     public void login(View view){
+        Log.d(TAG,"正在登陆中....\n"
+                + "accountNum = " + Objects.requireNonNull(account.get()).getAccountNum().get()
+                + "\npassword = " + Objects.requireNonNull(account.get()).getPassword().get());
         isLoading.set(true);
             new Handler().postDelayed(() -> {
-                Log.d(TAG,"正在登陆中....\n"
-                        + "accountNum = " + Objects.requireNonNull(account.get()).getAccountNum().get()
-                        + "\npassword = " + Objects.requireNonNull(account.get()).getPassword().get());
+                Log.d(TAG,"登陆成功....\n");
                 isLoading.set(false);
             }, 2000);
     }
