@@ -29,16 +29,16 @@ public class LoginViewModel extends ViewModel {
         String loginMsg =  "accountNum = " + Objects.requireNonNull(account.get()).getAccountNum().get()
                 + "\npassword = " + Objects.requireNonNull(account.get()).getPassword().get();
         Log.d(TAG,"正在登陆中....\n"
-               + loginMsg);
+                + loginMsg);
         loginPrompt.postValue("正在登陆账号：" + Objects.requireNonNull(account.get()).getAccountNum().get());
         isLoading.set(true);
-            new Handler().postDelayed(() -> {
-                Log.d(TAG,"登陆成功....\n");
-                isLoading.set(false);
-                Intent intent = new Intent(view.getContext(), MainActivity.class);
-                intent.putExtra("hello", loginMsg);
-                view.getContext().startActivity(intent);
-            }, 3000);
+        new Handler().postDelayed(() -> {
+            Log.d(TAG,"登陆成功....\n");
+            isLoading.set(false);
+            Intent intent = new Intent(view.getContext(), MainActivity.class);
+            intent.putExtra("hello", loginMsg);
+            view.getContext().startActivity(intent);
+        }, 3000);
 
     }
 
