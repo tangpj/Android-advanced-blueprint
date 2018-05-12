@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">todoDatabindingV2</string>
-    <string name="account_prompt">请输入账号</string>
-    <string name="password_prompt">请输入密码</string>
-    <string name="login">登陆</string>
-</resources>
