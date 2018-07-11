@@ -9,8 +9,14 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/lib" />
+            <option value="$PROJECT_DIR$/lib/datalib" />
+            <option value="$PROJECT_DIR$/lib/superlib" />
             <option value="$PROJECT_DIR$/modules" />
             <option value="$PROJECT_DIR$/modules/addtask" />
+            <option value="$PROJECT_DIR$/modules/statistics" />
+            <option value="$PROJECT_DIR$/modules/taskdetail" />
+            <option value="$PROJECT_DIR$/modules/tasks" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
