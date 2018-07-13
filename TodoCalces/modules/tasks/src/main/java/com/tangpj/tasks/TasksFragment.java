@@ -17,6 +17,7 @@
 package com.tangpj.tasks;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -46,6 +47,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.google.common.base.Preconditions.checkNotNull;
+import static com.tangpj.datalib.ExtraKey.TASK_ID;
+import static com.tangpj.datalib.RequestCode.EDIT_TASK;
 
 /**
  * Display a grid of {@link Task}s. User can choose to view all, active or completed tasks.
@@ -308,17 +311,17 @@ public class TasksFragment extends Fragment implements TasksContract.View {
 
     @Override
     public void showAddTask() {
-//        Intent intent = new Intent(getContext(), AddEditTaskActivity.class);
-//        startActivityForResult(intent, AddEditTaskActivity.REQUEST_ADD_TASK);
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("todo://add.task"));
+        startActivityForResult(intent, EDIT_TASK);
     }
 
     @Override
     public void showTaskDetailsUi(String taskId) {
         // in it's own Activity, since it makes more sense that way and it gives us the flexibility
         // to show some Intent stubbing.
-//        Intent intent = new Intent(getContext(), TaskDetailActivity.class);
-//        intent.putExtra(TaskDetailActivity.EXTRA_TASK_ID, taskId);
-//        startActivity(intent);
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("todo://task.detail"));
+        intent.putExtra(TASK_ID, taskId);
+        startActivity(intent);
     }
 
     @Override

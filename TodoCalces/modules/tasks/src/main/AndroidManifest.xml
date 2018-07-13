@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.tangpj.tasks">
   <application>
-    <activity android:name=".StatisticsActivity"/>
+    <activity android:name=".TasksActivity">
+      <intent-filter>
+        <data android:scheme="todo" android:host="tasks"/>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+    </activity>
   </application>
 </manifest>

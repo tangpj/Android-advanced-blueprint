@@ -17,6 +17,7 @@
 package com.tangpj.tasks;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.VisibleForTesting;
 import android.support.design.widget.NavigationView;
@@ -108,9 +109,10 @@ public class TasksActivity extends AppCompatActivity {
                         if (i == R.id.list_navigation_menu_item) {// Do nothing, we're already on that screen
 
                         } else if (i == R.id.statistics_navigation_menu_item) {
-//                            Intent intent =
-//                                    new Intent(TasksActivity.this, StatisticsActivity.class);
-//                            startActivity(intent);
+                            Intent intent =
+                                    new Intent(Intent.ACTION_VIEW);
+                            intent.setData(Uri.parse("todo://statistics"));
+                            startActivity(intent);
 
                         } else {
                         }

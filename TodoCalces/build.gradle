@@ -59,8 +59,11 @@ appConfig{
 
     apps{
         app{
-            mainActivity ".MainActivity"
-            modules ":modules:addtask"
+            mainActivity "com.tangpj.tasks.TasksActivity"
+            modules ':modules:addtask',
+                    ':modules:taskdetail',
+                    ':modules:tasks',
+                    ':modules:statistics'
         }
 
     }
@@ -84,14 +87,14 @@ appConfig{
         tasks{
             name ":modules:tasks"
             applicationId "com.tangpj.tasks"
-            mainActivity ".StatisticsActivity"
+            mainActivity ".TasksActivity"
             isRunAlone true
         }
 
         statistics{
             name ":modules:statistics"
             applicationId "com.tangpj.statistics"
-            mainActivity ".TasksActivity"
+            mainActivity ".StatisticsActivity"
             isRunAlone true
         }
 

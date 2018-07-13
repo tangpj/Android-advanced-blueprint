@@ -35,8 +35,6 @@ import static com.google.common.base.Preconditions.checkNotNull;
  */
 public class AddEditTaskFragment extends Fragment implements AddEditTaskContract.View {
 
-    public static final String ARGUMENT_EDIT_TASK_ID = "EDIT_TASK_ID";
-
     private AddEditTaskContract.Presenter mPresenter;
 
     private TextView mTitle;

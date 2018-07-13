@@ -28,6 +28,8 @@ import com.tangpj.datalib.Injection;
 import com.tangpj.superlib.util.ActivityUtils;
 import com.tangpj.superlib.util.EspressoIdlingResource;
 
+import static com.tangpj.datalib.ExtraKey.EDIT_TASK_ID;
+
 
 /**
  * Displays an add or edit task screen.
@@ -57,16 +59,16 @@ public class AddEditTaskActivity extends AppCompatActivity {
         AddEditTaskFragment addEditTaskFragment = (AddEditTaskFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.contentFrame);
 
-        String taskId = getIntent().getStringExtra(AddEditTaskFragment.ARGUMENT_EDIT_TASK_ID);
+        String taskId = getIntent().getStringExtra(EDIT_TASK_ID);
 
         setToolbarTitle(taskId);
 
         if (addEditTaskFragment == null) {
             addEditTaskFragment = AddEditTaskFragment.newInstance();
 
-            if (getIntent().hasExtra(AddEditTaskFragment.ARGUMENT_EDIT_TASK_ID)) {
+            if (getIntent().hasExtra(EDIT_TASK_ID)) {
                 Bundle bundle = new Bundle();
-                bundle.putString(AddEditTaskFragment.ARGUMENT_EDIT_TASK_ID, taskId);
+                bundle.putString(EDIT_TASK_ID, taskId);
                 addEditTaskFragment.setArguments(bundle);
             }
 

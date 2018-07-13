@@ -17,6 +17,7 @@ package com.tangpj.taskdetail;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -34,20 +35,18 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import com.google.common.base.Preconditions;
+import com.tangpj.datalib.ExtraKey;
 import com.tangpj.taskdetail.TaskDetailContract;
 
 import static com.google.common.base.Preconditions.checkNotNull;
+import static com.tangpj.datalib.ExtraKey.TASK_ID;
+import static com.tangpj.datalib.RequestCode.EDIT_TASK;
 
 /**
  * Main UI for the task detail screen.
  */
 public class TaskDetailFragment extends Fragment implements TaskDetailContract.View {
 
-    @NonNull
-    private static final String ARGUMENT_TASK_ID = "TASK_ID";
-
-    @NonNull
-    private static final int REQUEST_EDIT_TASK = 1;
 
     private TaskDetailContract.Presenter mPresenter;
 
@@ -59,7 +58,7 @@ public class TaskDetailFragment extends Fragment implements TaskDetailContract.V
 
     public static TaskDetailFragment newInstance(@Nullable String taskId) {
         Bundle arguments = new Bundle();
-        arguments.putString(ARGUMENT_TASK_ID, taskId);
+        arguments.putString(TASK_ID, taskId);
         TaskDetailFragment fragment = new TaskDetailFragment();
         fragment.setArguments(arguments);
         return fragment;
@@ -159,9 +158,9 @@ public class TaskDetailFragment extends Fragment implements TaskDetailContract.V
 
     @Override
     public void showEditTask(@NonNull String taskId) {
-//        Intent intent = new Intent(getContext(), AddEditTaskActivity.class);
-//        intent.putExtra(AddEditTaskFragment.ARGUMENT_EDIT_TASK_ID, taskId);
-//        startActivityForResult(intent, REQUEST_EDIT_TASK);
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("todo://edit.task"));
+        intent.putExtra(ExtraKey.EDIT_TASK_ID, taskId);
+        startActivityForResult(intent, EDIT_TASK);
     }
 
     @Override
@@ -182,7 +181,7 @@ public class TaskDetailFragment extends Fragment implements TaskDetailContract.V
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_EDIT_TASK) {
+        if (requestCode == EDIT_TASK) {
             // If the task was edited successfully, go back to the list.
             if (resultCode == Activity.RESULT_OK) {
                 getActivity().finish();

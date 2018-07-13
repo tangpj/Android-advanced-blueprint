@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.tangpj.statistics">
   <application>
-    <activity android:name=".TasksActivity"/>
+    <activity android:name=".StatisticsActivity">
+      <intent-filter>
+        <data android:scheme="todo" android:host="statistics"/>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="com.tangpj.tasks.TasksActivity" />
+    </activity>
   </application>
 </manifest>

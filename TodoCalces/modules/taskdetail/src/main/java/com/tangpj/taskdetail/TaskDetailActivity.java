@@ -26,12 +26,13 @@ import android.support.v7.widget.Toolbar;
 import com.tangpj.datalib.Injection;
 import com.tangpj.superlib.util.ActivityUtils;
 
+import static com.tangpj.datalib.ExtraKey.TASK_ID;
+
 /**
  * Displays task details screen.
  */
 public class TaskDetailActivity extends AppCompatActivity {
 
-    public static final String EXTRA_TASK_ID = "TASK_ID";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +48,7 @@ public class TaskDetailActivity extends AppCompatActivity {
         ab.setDisplayShowHomeEnabled(true);
 
         // Get the requested task id
-        String taskId = getIntent().getStringExtra(EXTRA_TASK_ID);
+        String taskId = getIntent().getStringExtra(TASK_ID);
 
         TaskDetailFragment taskDetailFragment = (TaskDetailFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.contentFrame);
