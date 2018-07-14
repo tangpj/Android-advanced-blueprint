@@ -52,12 +52,12 @@ ext {
 }
 
 apply plugin: 'calces.appconfig'
-appConfig{
+appConfig {
 
-    debugEnable true
+    debugEnable false
 
-    apps{
-        app{
+    apps {
+        app {
             mainActivity "com.tangpj.tasks.TasksActivity"
             modules ':modules:addtask',
                     ':modules:taskdetail',
@@ -65,17 +65,26 @@ appConfig{
                     ':modules:statistics'
         }
 
+        app2 {
+            name 'nostatistic'
+            applicationId 'com.tangpj.nostatistic'
+            mainActivity "com.tangpj.tasks.TasksActivity"
+            modules ':modules:addtask',
+                    ':modules:taskdetail',
+                    ':modules:tasks'
+        }
+
     }
 
-    modules{
-        addtask{
+    modules {
+        addtask {
             name ":modules:addtask"
             applicationId "com.tangpj.addtask"
             mainActivity ".AddEditTaskActivity"
             isRunAlone true
         }
 
-        taskdetail{
+        taskdetail {
             name ":modules:taskdetail"
             applicationId "com.tangpj.taskdetail"
             mainActivity ".TaskDetailActivity"
@@ -83,14 +92,14 @@ appConfig{
         }
 
 
-        tasks{
+        tasks {
             name ":modules:tasks"
             applicationId "com.tangpj.tasks"
             mainActivity ".TasksActivity"
             isRunAlone true
         }
 
-        statistics{
+        statistics {
             name ":modules:statistics"
             applicationId "com.tangpj.statistics"
             mainActivity ".StatisticsActivity"

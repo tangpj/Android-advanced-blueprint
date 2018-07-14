@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/modules/statistics" />
             <option value="$PROJECT_DIR$/modules/taskdetail" />
             <option value="$PROJECT_DIR$/modules/tasks" />
+            <option value="$PROJECT_DIR$/nostatistic" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

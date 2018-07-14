@@ -1,2 +1,2 @@
-include ':app', ':modules:addtask', ':lib:datalib', ':lib:superlib', ':modules:taskdetail',
+include ':app', ':modules:addtask', ':lib:datalib', ':lib:superlib', ':modules:taskdetail', ':nostatistic',
         ':modules:tasks', ':modules:statistics'
