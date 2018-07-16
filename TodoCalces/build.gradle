@@ -1,23 +1,25 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
+
 buildscript {
     ext.kotlin_version = '1.2.41'
     repositories {
         google()
         jcenter()
-        mavenLocal()
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
     }
+
     dependencies {
-        classpath "gradle.plugin.com.tangpj.tools:calces:1.0.1-SNAPSHOT"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
+
+plugins {
+    id "calces.appconfig" version "1.0.11"
+}
+
 
 allprojects {
     repositories {
@@ -36,7 +38,7 @@ ext {
     minSdkVersion = 14
     targetSdkVersion = 27
     compileSdkVersion = 27
-    buildToolsVersion = '27.0.2'
+    buildToolsVersion = '27.0.3'
 
     // App dependencies
     supportLibraryVersion = '26.1.0'
@@ -51,10 +53,11 @@ ext {
     roomVersion = "1.0.0"
 }
 
-apply plugin: 'calces.appconfig'
+
+
 appConfig {
 
-    debugEnable false
+    debugEnable true
 
     apps {
         app {
@@ -68,7 +71,6 @@ appConfig {
         app2 {
             name 'nostatistic'
             applicationId 'com.tangpj.nostatistic'
-            mainActivity "com.tangpj.tasks.TasksActivity"
             modules ':modules:addtask',
                     ':modules:taskdetail',
                     ':modules:tasks'
@@ -81,7 +83,7 @@ appConfig {
             name ":modules:addtask"
             applicationId "com.tangpj.addtask"
             mainActivity ".AddEditTaskActivity"
-            isRunAlone true
+            isRunAlone false
         }
 
         taskdetail {
@@ -92,7 +94,7 @@ appConfig {
         }
 
 
-        tasks {
+        task {
             name ":modules:tasks"
             applicationId "com.tangpj.tasks"
             mainActivity ".TasksActivity"

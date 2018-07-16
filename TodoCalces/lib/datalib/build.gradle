@@ -50,13 +50,13 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
-    compile "com.android.support.test.espresso:espresso-idling-resource:$rootProject.espressoVersion"
+    api "com.android.support.test.espresso:espresso-idling-resource:$rootProject.espressoVersion"
     testImplementation 'junit:junit:4.12'
     androidTestCompile "com.android.support.test:runner:$rootProject.ext.runnerVersion"
     androidTestCompile "com.android.support.test:rules:$rootProject.ext.rulesVersion"
     compile "android.arch.persistence.room:runtime:$rootProject.roomVersion"
     annotationProcessor "android.arch.persistence.room:compiler:$rootProject.roomVersion"
-    compile "com.google.guava:guava:$rootProject.guavaVersion"
+    api "com.google.guava:guava:$rootProject.guavaVersion"
     androidTestCompile "org.mockito:mockito-core:$rootProject.ext.mockitoVersion"
     androidTestCompile 'com.google.dexmaker:dexmaker:1.2'
     androidTestCompile 'com.google.dexmaker:dexmaker-mockito:1.2'

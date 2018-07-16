@@ -42,9 +42,9 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    api "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
-    compile "com.android.support:design:$rootProject.supportLibraryVersion"
+    api "com.android.support:design:$rootProject.supportLibraryVersion"
     testImplementation 'junit:junit:4.12'
     androidTestCompile "com.android.support.test:runner:$rootProject.ext.runnerVersion"
     androidTestCompile "com.android.support.test:rules:$rootProject.ext.rulesVersion"
