@@ -2,11 +2,11 @@
 <img src="https://raw.githubusercontent.com/DobbyTang/MarkdownRes/master/github/android_advanced_blueprint_img.jpg" alt="Material Render Phone">
 </p>
 
-##Android-advanced-blueprint
+## Android-advanced-blueprint
 
 > 在技术的路上不断精进
 
-##目录
+## 目录
 
 
 
@@ -26,9 +26,11 @@ DataBingding进阶系列，主要介绍如何让DataBinding兼容LiveData，使D
 
 
 
-## TodoCalces
+## Calces
 
-### 简介
+### TodoCalces
+
+#### 简介
 
 Android快速实现组件化插件演示Demo，通过Calces插件实现Android组件化功能，
 
