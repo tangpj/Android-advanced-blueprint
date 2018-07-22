@@ -57,7 +57,7 @@ ext {
 
 appConfig {
 
-    debugEnable true
+    debugEnable false
 
     apps {
         app {
@@ -70,6 +70,7 @@ appConfig {
 
         app2 {
             name 'nostatistic'
+            mainActivity "com.tangpj.tasks.TasksActivity"
             applicationId 'com.tangpj.nostatistic'
             modules ':modules:addtask',
                     ':modules:taskdetail',
