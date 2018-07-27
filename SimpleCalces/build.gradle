@@ -20,7 +20,7 @@ plugins {
 }
 
 appConfig {
-    debugEnable false
+    debugEnable true
 
     apps {
         app{
@@ -30,11 +30,13 @@ appConfig {
 
     modules{
         library1{
+            name ':library1'
             mainActivity ".Library1Activity"
             applicationId "com.tangpj.library1"
             isRunAlone true
         }
         library2{
+            name ':library2'
             mainActivity ".Library2Activity"
             applicationId "com.tangpj.library2"
             isRunAlone true
