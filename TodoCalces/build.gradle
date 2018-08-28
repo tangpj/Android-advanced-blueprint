@@ -1,11 +1,11 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
-
 buildscript {
     ext.kotlin_version = '1.2.41'
     repositories {
         google()
         jcenter()
+        mavenLocal()
     }
 
     dependencies {
@@ -17,7 +17,7 @@ buildscript {
 }
 
 plugins {
-    id "calces.appconfig" version "1.0.11"
+    id "calces.appconfig" version "1.1.0"
 }
 
 
@@ -25,6 +25,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        mavenLocal()
     }
 }
 
@@ -55,13 +56,15 @@ ext {
 
 
 
+
 appConfig {
 
-    debugEnable false
+    debugEnable true
 
     apps {
         app {
             mainActivity "com.tangpj.tasks.TasksActivity"
+            applicationName = "com.tangpj.superlib.App2"
             modules ':modules:addtask',
                     ':modules:taskdetail',
                     ':modules:tasks',
@@ -84,14 +87,16 @@ appConfig {
             name ":modules:addtask"
             applicationId "com.tangpj.addtask"
             mainActivity ".AddEditTaskActivity"
-            isRunAlone false
+            applicationName = "com.tangpj.superlib.App2"
+            isRunAlone true
         }
 
         taskdetail {
             name ":modules:taskdetail"
             applicationId "com.tangpj.taskdetail"
             mainActivity ".TaskDetailActivity"
-            isRunAlone true
+            applicationName = "com.tangpj.superlib.App1"
+            isRunAlone false
         }
 
 
@@ -99,14 +104,14 @@ appConfig {
             name ":modules:tasks"
             applicationId "com.tangpj.tasks"
             mainActivity ".TasksActivity"
-            isRunAlone true
+            isRunAlone false
         }
 
         statistics {
             name ":modules:statistics"
             applicationId "com.tangpj.statistics"
             mainActivity ".StatisticsActivity"
-            isRunAlone true
+            isRunAlone false
         }
 
 
