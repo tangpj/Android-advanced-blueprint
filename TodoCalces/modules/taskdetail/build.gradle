@@ -47,8 +47,8 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     api "com.android.support:design:$rootProject.supportLibraryVersion"
     testImplementation 'junit:junit:4.12'
-    androidTestCompile "com.android.support.test:runner:$rootProject.ext.runnerVersion"
-    androidTestCompile "com.android.support.test:rules:$rootProject.ext.rulesVersion"
+    androidTestImplementation "com.android.support.test:runner:$rootProject.ext.runnerVersion"
+    androidTestImplementation "com.android.support.test:rules:$rootProject.ext.rulesVersion"
     implementation project(":lib:superlib")
     implementation project(":lib:datalib")
 }

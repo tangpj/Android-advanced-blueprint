@@ -23,4 +23,14 @@
 
     <dimen name="fab_margin">16dp</dimen>
 
+
+    <!--button dimens-->
+    <dimen name="button_min_height_material">48dp</dimen>
+    <dimen name="button_min_width_material">88dp</dimen>
+
+    <!--text view dimens-->
+    <dimen name="text_view_min_height_material">48dp</dimen>
+    <dimen name="text_view_min_width_material">88dp</dimen>
+
+
 </resources>

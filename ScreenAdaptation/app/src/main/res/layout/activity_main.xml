@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/view1"
+            android:layout_width="@dimen/px_100"
+            android:layout_height="@dimen/px_100"
+            android:background="@color/color1"
+            android:textColor="@color/white"
+            android:text="100PX"
+            android:textSize="@dimen/text_px_28"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/view2"
+            android:layout_width="@dimen/px_200"
+            android:layout_height="@dimen/px_200"
+            android:background="@color/color2"
+            android:textColor="@color/white"
+            android:text="200PX"
+            android:textSize="@dimen/text_px_28"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@+id/view1" />
+
+        <TextView
+            android:id="@+id/view3"
+            android:layout_width="@dimen/px_75"
+            android:layout_height="@dimen/px_200"
+            android:background="@color/color3"
+            android:textColor="@color/white"
+            android:text="75PX"
+            android:textSize="@dimen/text_px_28"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@+id/view2"
+            />
+
+        <TextView
+            android:id="@+id/view4"
+            android:layout_width="@dimen/px_100"
+            android:layout_height="@dimen/px_100"
+            android:background="@color/color4"
+            android:gravity="center"
+            android:text="100PX"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_px_28"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+        <TextView
+            android:id="@+id/view5"
+            android:layout_width="@dimen/px_250"
+            android:layout_height="@dimen/px_250"
+            android:background="@color/color5"
+            android:gravity="center"
+            android:text="250PX"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_px_28"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+        <TextView
+            android:id="@+id/view6"
+            android:layout_width="@dimen/px_125"
+            android:layout_height="@dimen/px_250"
+            android:background="@color/color6"
+            android:gravity="center"
+            android:text="125PX"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_px_28"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/view5"
+            app:layout_constraintTop_toTopOf="@+id/view5" />
+
+
+        <TextView
+            android:id="@+id/view7"
+            android:layout_width="@dimen/px_375"
+            android:layout_height="@dimen/px_200"
+            android:background="@color/color7"
+            android:gravity="center"
+            android:text="375PX"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_px_28"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Hello Calces Screen!"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_px_32"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

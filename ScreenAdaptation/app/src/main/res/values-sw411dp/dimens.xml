@@ -1,0 +1,14 @@
+<resources>
+  <!-- sw411dp -->
+  <dimen name='px_48'>53dp</dimen>
+  <dimen name='px_75'>83dp</dimen>
+  <dimen name='px_100'>110dp</dimen>
+  <dimen name='px_125'>137dp</dimen>
+  <dimen name='px_200'>220dp</dimen>
+  <dimen name='px_250'>274dp</dimen>
+  <dimen name='px_300'>329dp</dimen>
+  <dimen name='px_375'>411dp</dimen>
+  <dimen name='text_px_28'>31sp</dimen>
+  <dimen name='text_px_32'>36sp</dimen>
+  <dimen name='text_px_40'>44sp</dimen>
+</resources>

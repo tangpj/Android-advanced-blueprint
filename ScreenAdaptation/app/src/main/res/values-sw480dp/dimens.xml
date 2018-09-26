@@ -1,0 +1,14 @@
+<resources>
+  <!-- sw480dp -->
+  <dimen name='px_48'>62dp</dimen>
+  <dimen name='px_75'>96dp</dimen>
+  <dimen name='px_100'>128dp</dimen>
+  <dimen name='px_125'>160dp</dimen>
+  <dimen name='px_200'>256dp</dimen>
+  <dimen name='px_250'>320dp</dimen>
+  <dimen name='px_300'>384dp</dimen>
+  <dimen name='px_375'>480dp</dimen>
+  <dimen name='text_px_28'>36sp</dimen>
+  <dimen name='text_px_32'>41sp</dimen>
+  <dimen name='text_px_40'>52sp</dimen>
+</resources>

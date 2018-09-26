@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -14,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         btn_library1.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW,Uri.parse("simple://library1"))
             startActivity(intent)
+            val  a = StringBuilder("")
         }
         btn_library2.setOnClickListener{
             val intent = Intent(Intent.ACTION_VIEW,Uri.parse("simple://library2"))
