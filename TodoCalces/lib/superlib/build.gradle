@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'calces.screen'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
