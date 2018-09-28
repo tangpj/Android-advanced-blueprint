@@ -23,14 +23,14 @@ screen{
 
     dimens{
         designPx 375
-        smallesWidths 360,411,480,900
+        smallesWidths 320,375,411,900
         scale BigDecimal.ROUND_UP
         auto true
     }
 
     mipmap{
         designDensity "xxxhdpi"
-        mipmapDensity 'xxhdpi','xhdpi','hdpi'
+        mipmapDensity 'xxhdpi','xhdpi','hdpi','mdpi'
         auto true
     }
 

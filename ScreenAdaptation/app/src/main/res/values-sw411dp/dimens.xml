@@ -4,6 +4,7 @@
   <dimen name='px_75'>83dp</dimen>
   <dimen name='px_100'>110dp</dimen>
   <dimen name='px_125'>137dp</dimen>
+  <dimen name='px_150'>165dp</dimen>
   <dimen name='px_200'>220dp</dimen>
   <dimen name='px_250'>274dp</dimen>
   <dimen name='px_300'>329dp</dimen>
