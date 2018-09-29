@@ -28,7 +28,7 @@ DataBingding进阶系列，主要介绍如何让DataBinding兼容LiveData，使D
 
 ## Calces
 
-
+Calces源码地址：[**calces-gradle-plugin**](https://github.com/Tangpj/calces-gradle-plugin) 你的star是我坚持的动力，觉得这个Calces有用的话，可以点下star
 
 ### SimpleCalces
 
@@ -36,7 +36,7 @@ Android快速实现组件化插件演示Demo，通过Calces插件实现Android�
 
 该Demo演示了通过Calces插件实现同时构建多个依赖不同模块的App。
 
-Calces源码地址：[**calces-gradle-plugin**](https://github.com/Tangpj/calces-gradle-plugin)
+
 
 ### TodoCalces
 
@@ -46,4 +46,15 @@ Android快速实现组件化插件演示Demo，该Demo是通过对Google open pr
 
 该Demo演示了通过Calces插件实现同时构建多个依赖不同模块的App。
 
-Calces源码地址：[**calces-gradle-plugin**](https://github.com/Tangpj/calces-gradle-plugin)
+如果想更深一步了解的话，可以查看博客：[Gradle自动实现Android组件化模块构建](http://tangpj.com/2018/07/22/calces-componentization/)
+
+
+
+### ScreenAdaptation
+
+#### 简介
+
+使用calces.screen快速实现Android屏幕适配功能演示Demo。
+
+详细教程：[给你一个全自动的屏幕适配方案（基于SW方案）！—— 解放你和UI的双手](http://tangpj.com/2018/09/29/calces-screen/)
+
