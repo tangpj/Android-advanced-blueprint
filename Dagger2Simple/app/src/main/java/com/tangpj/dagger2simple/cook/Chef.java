@@ -1,17 +1,20 @@
 package com.tangpj.dagger2simple.cook;
 
-import android.util.Log;
 
 import java.util.Map;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
+@Singleton
 public class Chef implements Cooking{
 
-    public static final String TAG = "Chef";
+    Menu menu;
 
     @Inject
-    Menu menu;
+    public Chef(Menu menu){
+        this.menu = menu;
+    }
 
     @Override
     public String cook(){

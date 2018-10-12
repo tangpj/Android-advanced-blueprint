@@ -8,4 +8,4 @@
 app/libs/
 /.idea
 app/build
-
+gradlew.bat

@@ -9,10 +9,13 @@ import javax.inject.Singleton;
 public class Menu {
 
     @Inject
-    Map<String,Boolean> menus;
+    public Map<String,Boolean> menus;
 
     Map<String,Boolean> getMenus(){
         return menus;
     }
+
+    @Inject
+    public Menu(){}
 
 }
