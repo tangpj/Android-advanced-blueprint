@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Order</string>
     <string name="action_settings">Settings</string>
+
+    <string name="save">保存</string>
+    <string name="hint_dish_name">请输入菜式名字，10个字以内</string>
+    <string name="hint_dish_des">请输入菜式描述</string>
+    <string name="empty_dish_message">找不到指定菜式</string>
 </resources>

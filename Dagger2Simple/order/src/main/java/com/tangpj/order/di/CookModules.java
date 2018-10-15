@@ -5,10 +5,13 @@ import android.content.SharedPreferences;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.tangpj.order.pojo.Dish;
 
 import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import javax.inject.Singleton;
 
@@ -19,15 +22,15 @@ import dagger.Provides;
 public class CookModules {
 
     private static final String KEY_MENU = "menu";
-    private static final String SP_COOK = "cook";
+    public static final String SP_COOK = "cook";
 
     @Singleton
     @Provides
-    public Map<String, Boolean> providerMenus(SharedPreferences sp, Gson gson){
-        Map<String, Boolean> menus;
+    public Set<Dish> providerMenus(SharedPreferences sp, Gson gson){
+        Set<Dish> menus;
         String menuJson = sp.getString(KEY_MENU, null);
         if (menuJson == null){
-            return new LinkedHashMap<>();
+            return new LinkedHashSet<>();
         }
         menus = gson.fromJson(menuJson, new TypeToken<Map<String, Boolean>>(){}.getType());
         return menus;
