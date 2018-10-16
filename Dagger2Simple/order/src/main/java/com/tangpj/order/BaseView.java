@@ -17,7 +17,4 @@
 package com.tangpj.order;
 
 public interface BaseView<T> {
-
-    void setPresenter(T presenter);
-
 }

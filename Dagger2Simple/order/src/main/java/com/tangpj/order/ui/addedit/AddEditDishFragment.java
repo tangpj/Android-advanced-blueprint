@@ -1,6 +1,5 @@
 package com.tangpj.order.ui.addedit;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -11,17 +10,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.google.gson.Gson;
 import com.tangpj.order.R;
 import com.tangpj.order.pojo.Dish;
 
-import java.util.Map;
 
 import javax.inject.Inject;
 
 import dagger.android.support.DaggerFragment;
 
-import static com.tangpj.order.di.CookModules.SP_COOK;
 
 public class AddEditDishFragment extends DaggerFragment implements  AddEditDishContract.View{
 
@@ -31,14 +27,14 @@ public class AddEditDishFragment extends DaggerFragment implements  AddEditDishC
     private EditText etDescription;
     private Button btSummit;
 
-    @Inject
-    SharedPreferences sp;
 
     @Inject
-    Map<String, Boolean> menus;
+    AddEditDishContract.Presenter mPresenter;
 
     @Inject
-    Gson gson;
+    public AddEditDishFragment(){
+
+    }
 
     @Nullable
     @Override
@@ -48,22 +44,27 @@ public class AddEditDishFragment extends DaggerFragment implements  AddEditDishC
         return view;
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        mPresenter.takeView(this);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mPresenter.dropView();
+    }
+
     private void initView(View view){
         etDish = view.findViewById(R.id.et_dish);
         etDescription = view.findViewById(R.id.et_dish_description);
         btSummit = view.findViewById(R.id.bt_summit);
-        btSummit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                summit(v);
-            }
-        });
+        btSummit.setOnClickListener(this::summit);
     }
 
     public void summit(View view){
-        menus.put(etDish.getText().toString(), false);
-        SharedPreferences.Editor editor = sp.edit();
-        editor.putString(SP_COOK, gson.toJson(menus)).apply();
+        mPresenter.saveDish(etDish.getText().toString(), etDescription.getText().toString());
     }
 
     @Override
@@ -77,8 +78,4 @@ public class AddEditDishFragment extends DaggerFragment implements  AddEditDishC
         Snackbar.make(etDish, R.string.empty_dish_message, Snackbar.LENGTH_SHORT).show();
     }
 
-    @Override
-    public void setPresenter(AddEditDishContract.Presenter presenter) {
-
-    }
 }

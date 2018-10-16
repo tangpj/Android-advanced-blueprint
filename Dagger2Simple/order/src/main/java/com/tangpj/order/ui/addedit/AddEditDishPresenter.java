@@ -1,5 +1,7 @@
 package com.tangpj.order.ui.addedit;
 
+import android.support.annotation.Nullable;
+
 import com.tangpj.order.pojo.Dish;
 
 import java.util.Set;
@@ -16,9 +18,8 @@ public class AddEditDishPresenter implements AddEditDishContract.Presenter {
     Set<Dish> dishSet;
 
     @Inject
-    public AddEditDishPresenter(String id, AddEditDishContract.View view){
+    public AddEditDishPresenter(@Nullable String id){
         this.mId = id;
-        this.mView = view;
 
     }
 
@@ -39,9 +40,16 @@ public class AddEditDishPresenter implements AddEditDishContract.Presenter {
         }
     }
 
+
     @Override
-    public void start() {
-        mView.setPresenter(this);
+    public void takeView(AddEditDishContract.View view) {
+        mView = view;
         loadDish();
+
+    }
+
+    @Override
+    public void dropView() {
+        mView = null;
     }
 }

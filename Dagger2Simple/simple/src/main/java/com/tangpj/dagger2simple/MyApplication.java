@@ -3,6 +3,8 @@ package com.tangpj.dagger2simple;
 
 
 
+import com.tangpj.dagger2simple.di.DaggerCookAppComponent;
+
 import dagger.android.AndroidInjector;
 import dagger.android.DaggerApplication;
 
@@ -16,6 +18,6 @@ public class MyApplication extends DaggerApplication{
 
     @Override
     protected AndroidInjector<? extends DaggerApplication> applicationInjector() {
-        return null;
+        return DaggerCookAppComponent.builder().create(this);
     }
 }

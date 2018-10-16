@@ -1,19 +1,18 @@
-package com.tangpj.order.ui.addedit;
+package com.tangpj.order.ui.dishes;
 
 import com.tangpj.order.BasePresenter;
 import com.tangpj.order.BaseView;
 import com.tangpj.order.pojo.Dish;
 
-public interface AddEditDishContract {
+import java.util.List;
+
+public interface DishesContract {
 
     interface View extends BaseView<Presenter>{
-        void showDish(Dish dish);
-        void showEmptyDishError();
+        void showDishes(List<Dish> dishes);
     }
 
     interface Presenter extends BasePresenter<View>{
-        void saveDish(String name, String description);
-        void loadDish();
+        void loadDishes();
     }
-
 }
