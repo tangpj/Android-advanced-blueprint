@@ -15,6 +15,7 @@ import static com.tangpj.order.ActivityUtils.addFragmentToActivity;
 
 public class AddEditDishActivity extends DaggerAppCompatActivity {
 
+
     @Inject
     AddEditDishFragment mAddEditDishFragment;
 
@@ -30,7 +31,7 @@ public class AddEditDishActivity extends DaggerAppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tool_bar);
+        setContentView(R.layout.activity_add_dish);
 
         AddEditDishFragment addEditDishFragment
                 = (AddEditDishFragment)getSupportFragmentManager().findFragmentById(R.id.content_fragment);

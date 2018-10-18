@@ -9,4 +9,7 @@
     <string name="menus">菜单</string>
     <string name="add_dish">添加菜式</string>
     <string name="edit_dish">编辑菜式</string>
+    <string name="add">新增</string>
+    <string name="edit">编辑</string>
+    <string name="delete">删除</string>
 </resources>

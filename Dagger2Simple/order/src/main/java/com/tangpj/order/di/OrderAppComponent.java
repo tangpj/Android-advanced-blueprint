@@ -1,6 +1,7 @@
 package com.tangpj.order.di;
 
 import com.tangpj.order.OrderApp;
+import com.tangpj.order.ui.dishes.DishesModules;
 
 import javax.inject.Singleton;
 
@@ -11,12 +12,9 @@ import dagger.android.support.AndroidSupportInjectionModule;
 @Singleton
 @Component(modules = {
         AndroidSupportInjectionModule.class,
-        ActivityModules.class,
         LayoutManagerModules.class,
-        FragmentBuildersModule.class,
-        PresenterModules.class,
-        DishesModules.class,
-        CookAppModules.class})
+        CookAppModules.class,
+        ActivityModules.class})
 public interface OrderAppComponent extends AndroidInjector<OrderApp>{
 
     @Component.Builder

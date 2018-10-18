@@ -12,17 +12,16 @@ public class Dish {
     private final String mId;
     private final String mName;
     private final String mDescription;
-    private final boolean isSelect;
+    private boolean isSelect;
 
-    public Dish(String id, String name, String mDescription, boolean isSelect){
+    public Dish(String id, String name, String mDescription){
         this.mId = id;
         this.mName = name;
         this.mDescription = mDescription;
-        this.isSelect = isSelect;
     }
 
-    public Dish(String name, String mDescription, boolean isSelect ){
-        this(UUID.randomUUID().toString(), name, mDescription ,isSelect);
+    public Dish(String name, String mDescription){
+        this(UUID.randomUUID().toString(), name, mDescription);
     }
 
     @NonNull
@@ -40,10 +39,6 @@ public class Dish {
         return mDescription;
     }
 
-    @Nullable
-    public boolean getIsSelect(){
-        return isSelect;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -52,13 +47,13 @@ public class Dish {
         Dish task = (Dish) o;
         return Objects.equal(mId, task.mId) &&
                 Objects.equal(mName, task.mName) &&
-                Objects.equal(mDescription, task.mDescription) &&
-                Objects.equal(isSelect, task.isSelect);
+                Objects.equal(mDescription, task.mDescription);
+
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(mId, mName,  mDescription, isSelect);
+        return Objects.hashCode(mId, mName,  mDescription);
     }
 
 

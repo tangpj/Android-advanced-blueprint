@@ -27,6 +27,9 @@ public class AddEditDishFragment extends DaggerFragment implements  AddEditDishC
     private EditText etDescription;
     private Button btSummit;
 
+    @Nullable
+    @Inject
+    String dishId;
 
     @Inject
     AddEditDishContract.Presenter mPresenter;
@@ -76,6 +79,11 @@ public class AddEditDishFragment extends DaggerFragment implements  AddEditDishC
     @Override
     public void showEmptyDishError() {
         Snackbar.make(etDish, R.string.empty_dish_message, Snackbar.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void saveSucceed(Dish dish) {
+        if (getActivity() != null) getActivity().finish();
     }
 
 }

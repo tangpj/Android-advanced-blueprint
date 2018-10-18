@@ -9,6 +9,7 @@ public interface AddEditDishContract {
     interface View extends BaseView<Presenter>{
         void showDish(Dish dish);
         void showEmptyDishError();
+        void saveSucceed(Dish dish);
     }
 
     interface Presenter extends BasePresenter<View>{

@@ -5,6 +5,7 @@ import com.tangpj.order.BaseView;
 import com.tangpj.order.pojo.Dish;
 
 import java.util.List;
+import java.util.Map;
 
 public interface DishesContract {
 
@@ -13,6 +14,11 @@ public interface DishesContract {
     }
 
     interface Presenter extends BasePresenter<View>{
+
         void loadDishes();
+
+        String order(Map<Dish, Boolean> selectMap);
+
+        boolean deleteDish(String id);
     }
 }

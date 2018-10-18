@@ -24,8 +24,8 @@ import dagger.Provides;
 @Module
 public abstract class CookAppModules {
 
-    private static final String KEY_MENU = "menu";
-    public static final String SP_COOK = "cook";
+    public static final String KEY_MENU = "menu";
+    private static final String SP_COOK = "cook";
 
     @Singleton
     @Provides
@@ -35,7 +35,7 @@ public abstract class CookAppModules {
         if (menuJson == null){
             return new LinkedHashSet<>();
         }
-        menus = gson.fromJson(menuJson, new TypeToken<Map<String, Boolean>>(){}.getType());
+        menus = gson.fromJson(menuJson, new TypeToken<Set<Dish>>(){}.getType());
         return menus;
     }
 
@@ -51,6 +51,7 @@ public abstract class CookAppModules {
         return new Gson();
     }
 
+    @Singleton
     @Binds
     public abstract Context context(OrderApp application);
 
