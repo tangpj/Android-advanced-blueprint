@@ -6,6 +6,8 @@ import android.support.v7.widget.RecyclerView;
 import com.tangpj.order.di.DishesScoped;
 
 
+import javax.inject.Named;
+
 import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;

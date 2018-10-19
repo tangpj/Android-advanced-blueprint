@@ -1,12 +1,10 @@
 package com.tangpj.order.ui.dishes;
 
 import android.content.SharedPreferences;
-import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 
 import com.google.gson.Gson;
 import com.tangpj.order.di.CookAppModules;
-import com.tangpj.order.di.DishesScoped;
 import com.tangpj.order.pojo.Dish;
 
 import java.util.ArrayList;

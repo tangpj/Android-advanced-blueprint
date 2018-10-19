@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
@@ -21,6 +22,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import dagger.android.support.DaggerFragment;
 
@@ -31,8 +33,9 @@ public class DishesFragment extends DaggerFragment implements DishesContract.Vie
     @Inject
     DishesAdapter dishesAdapter;
 
+    @Named("horizontal")
     @Inject
-    RecyclerView.LayoutManager layoutManager;
+    LinearLayoutManager layoutManager;
 
     @Inject
     DishesContract.Presenter mPresenter;
