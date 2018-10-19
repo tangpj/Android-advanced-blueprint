@@ -19,9 +19,6 @@ public class AddEditDishActivity extends DaggerAppCompatActivity {
     @Inject
     AddEditDishFragment mAddEditDishFragment;
 
-    @Inject
-    AddEditDishContract.Presenter mAddEditDishPresenter;
-
     @Nullable
     @Inject
     String dishId;
@@ -49,9 +46,9 @@ public class AddEditDishActivity extends DaggerAppCompatActivity {
         setSupportActionBar(toolbar);
 
         if (TextUtils.isEmpty(dishId)){
-            toolbar.setTitle(R.string.add_dish);
+            getSupportActionBar().setTitle(R.string.add_dish);
         }else {
-            toolbar.setTitle(R.string.edit_dish);
+            getSupportActionBar().setTitle(R.string.edit_dish);
         }
 
     }

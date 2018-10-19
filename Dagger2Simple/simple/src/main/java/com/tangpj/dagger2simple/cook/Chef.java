@@ -6,7 +6,6 @@ import java.util.Map;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-@Singleton
 public class Chef implements Cooking{
 
     Menu menu;

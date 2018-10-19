@@ -1,6 +1,5 @@
 package com.tangpj.order.di;
 
-import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 
@@ -9,10 +8,7 @@ import com.google.gson.reflect.TypeToken;
 import com.tangpj.order.OrderApp;
 import com.tangpj.order.pojo.Dish;
 
-import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 import javax.inject.Singleton;

@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tangpj.order.R;
+import com.tangpj.order.di.FragmentScoped;
 import com.tangpj.order.pojo.Dish;
 import com.tangpj.order.ui.addedit.AddEditDishActivity;
 import com.tangpj.order.ui.addedit.AddEditDishFragment;

@@ -55,6 +55,7 @@ public class DishesAdapter extends RecyclerView.Adapter<DishesAdapter.DishHolder
     }
 
     public HashMap<Dish, Boolean> getSelectMap() {
+        if (selectMap == null) return null;
         return new HashMap<>(selectMap);
     }
 

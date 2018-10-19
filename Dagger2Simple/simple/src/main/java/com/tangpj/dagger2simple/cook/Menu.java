@@ -5,7 +5,7 @@ import java.util.Map;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-@Singleton
+
 public class Menu {
 
     public Map<String,Boolean> menus;

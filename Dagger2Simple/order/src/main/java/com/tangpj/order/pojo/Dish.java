@@ -12,8 +12,6 @@ public class Dish {
     private final String mId;
     private final String mName;
     private final String mDescription;
-    private boolean isSelect;
-
     public Dish(String id, String name, String mDescription){
         this.mId = id;
         this.mName = name;

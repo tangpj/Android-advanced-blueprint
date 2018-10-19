@@ -13,4 +13,6 @@ public class LayoutManagerModules {
     public LinearLayoutManager providesLinearLayoutManager(Context context){
         return new LinearLayoutManager(context);
     }
+
+
 }

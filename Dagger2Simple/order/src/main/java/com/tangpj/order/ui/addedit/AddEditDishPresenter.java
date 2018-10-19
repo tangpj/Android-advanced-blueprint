@@ -29,7 +29,7 @@ public class AddEditDishPresenter implements AddEditDishContract.Presenter {
     Gson gson;
 
     @Inject
-    public AddEditDishPresenter(@Nullable String id){
+    public AddEditDishPresenter(@Nullable String id ){
         this.mId = id;
 
     }

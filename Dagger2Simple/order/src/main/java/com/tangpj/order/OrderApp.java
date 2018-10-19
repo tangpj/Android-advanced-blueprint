@@ -9,6 +9,12 @@ public class OrderApp extends DaggerApplication {
 
 
     @Override
+    public void onCreate() {
+        super.onCreate();
+
+    }
+
+    @Override
     protected AndroidInjector<? extends DaggerApplication> applicationInjector() {
         return DaggerOrderAppComponent.builder().create(this);
     }

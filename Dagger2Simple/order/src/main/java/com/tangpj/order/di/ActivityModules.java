@@ -11,9 +11,11 @@ import dagger.android.ContributesAndroidInjector;
 @Module
 public abstract class ActivityModules {
 
+    @DishesScoped
     @ContributesAndroidInjector(modules = DishesModules.class)
     abstract public DishesActivity contributesDishActivity();
 
+    @ActivityScoped
     @ContributesAndroidInjector(modules = AddEditModules.class)
     abstract public AddEditDishActivity contributesAddEditDishActivity();
 
