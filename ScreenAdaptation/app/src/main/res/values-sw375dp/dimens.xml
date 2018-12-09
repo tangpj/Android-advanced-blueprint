@@ -1,15 +1,16 @@
 <resources>
   <!-- sw375dp -->
-  <dimen name='px_48'>48dp</dimen>
-  <dimen name='px_75'>75dp</dimen>
-  <dimen name='px_100'>100dp</dimen>
-  <dimen name='px_125'>125dp</dimen>
-  <dimen name='px_150'>150dp</dimen>
-  <dimen name='px_200'>200dp</dimen>
-  <dimen name='px_250'>250dp</dimen>
-  <dimen name='px_300'>300dp</dimen>
-  <dimen name='px_375'>375dp</dimen>
-  <dimen name='text_px_28'>28sp</dimen>
-  <dimen name='text_px_32'>32sp</dimen>
-  <dimen name='text_px_40'>40sp</dimen>
+  <dimen name='px_0_5'>0.5dp</dimen>
+  <dimen name='px_48'>48.8dp</dimen>
+  <dimen name='px_75'>75.0dp</dimen>
+  <dimen name='px_100'>100.0dp</dimen>
+  <dimen name='px_125'>125.0dp</dimen>
+  <dimen name='px_150'>150.0dp</dimen>
+  <dimen name='px_200'>200.0dp</dimen>
+  <dimen name='px_250'>250.0dp</dimen>
+  <dimen name='px_300'>300.0dp</dimen>
+  <dimen name='px_375'>375.0dp</dimen>
+  <dimen name='text_px_28'>28.0sp</dimen>
+  <dimen name='text_px_32'>32.0sp</dimen>
+  <dimen name='text_px_40'>40.0sp</dimen>
 </resources>

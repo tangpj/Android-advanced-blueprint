@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--design 375px-->
-    <dimen name="px_48">48dp</dimen>
+    <dimen name="px_0_5">0.5dp</dimen>
+    <dimen name="px_48">48.8dp</dimen>
     <dimen name="px_75">75dp</dimen>
     <dimen name="px_100">100dp</dimen>
     <dimen name="px_125">125dp</dimen>

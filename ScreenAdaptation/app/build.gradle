@@ -24,7 +24,8 @@ screen{
     dimens{
         designPx 375
         smallesWidths 320,375,411,900
-        scale BigDecimal.ROUND_UP
+        scale 3
+        scaleMode BigDecimal.ROUND_HALF_UP
         auto true
     }
 

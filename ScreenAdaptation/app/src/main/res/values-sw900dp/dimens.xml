@@ -1,15 +1,16 @@
 <resources>
   <!-- sw900dp -->
-  <dimen name='px_48'>116dp</dimen>
-  <dimen name='px_75'>180dp</dimen>
-  <dimen name='px_100'>240dp</dimen>
-  <dimen name='px_125'>300dp</dimen>
-  <dimen name='px_150'>360dp</dimen>
-  <dimen name='px_200'>480dp</dimen>
-  <dimen name='px_250'>600dp</dimen>
-  <dimen name='px_300'>720dp</dimen>
-  <dimen name='px_375'>900dp</dimen>
-  <dimen name='text_px_28'>68sp</dimen>
-  <dimen name='text_px_32'>77sp</dimen>
-  <dimen name='text_px_40'>96sp</dimen>
+  <dimen name='px_0_5'>1.2dp</dimen>
+  <dimen name='px_48'>117.12dp</dimen>
+  <dimen name='px_75'>180.0dp</dimen>
+  <dimen name='px_100'>240.0dp</dimen>
+  <dimen name='px_125'>300.0dp</dimen>
+  <dimen name='px_150'>360.0dp</dimen>
+  <dimen name='px_200'>480.0dp</dimen>
+  <dimen name='px_250'>600.0dp</dimen>
+  <dimen name='px_300'>720.0dp</dimen>
+  <dimen name='px_375'>900.0dp</dimen>
+  <dimen name='text_px_28'>67.2sp</dimen>
+  <dimen name='text_px_32'>76.8sp</dimen>
+  <dimen name='text_px_40'>96.0sp</dimen>
 </resources>

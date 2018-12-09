@@ -14,7 +14,7 @@ buildscript {
 }
 
 plugins {
-    id "calces.screen" version "1.2.3"
+    id "calces.screen" version "1.2.52"
 }
 
 allprojects {
