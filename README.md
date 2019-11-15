@@ -8,6 +8,13 @@
 
 ## 目录
 
+- [介绍](#介绍)
+- [ToDoDataBinding](#ToDoDataBinding)
+- [Calces](#Calces)
+- [SimpleCalces](#SimpleCalces)
+- [TodoCalces](#TodoCalces)
+- [ScreenAdaptation](#ScreenAdaptation)
+- [Kotlin函数式编程Demo](#UPDATE)
 
 
 ## 介绍
@@ -30,7 +37,7 @@ DataBingding进阶系列，主要介绍如何让DataBinding兼容LiveData，使D
 
 Calces源码地址：[**calces-gradle-plugin**](https://github.com/Tangpj/calces-gradle-plugin) 你的star是我坚持的动力，觉得这个Calces有用的话，可以点下star
 
-### SimpleCalces
+## SimpleCalces
 
 Android快速实现组件化插件演示Demo，通过Calces插件实现Android组件化功能，
 
@@ -38,9 +45,9 @@ Android快速实现组件化插件演示Demo，通过Calces插件实现Android�
 
 
 
-### TodoCalces
+## TodoCalces
 
-#### 简介
+### 简介
 
 Android快速实现组件化插件演示Demo，该Demo是通过对Google open project中的todo-mvp进行模块划分实现的一个待办事项演示Demo，该demo把模块划分为：基础库模块：datalib、superlib；功能模块：addtask、statistics、taskdetail、tasks。其中，对功能模块实现了组件化构建功能，使功能模块能够独立运行，并且能模块化构建。
 
@@ -50,11 +57,23 @@ Android快速实现组件化插件演示Demo，该Demo是通过对Google open pr
 
 
 
-### ScreenAdaptation
+## ScreenAdaptation
 
-#### 简介
+### 简介
 
 使用calces.screen快速实现Android屏幕适配功能演示Demo。
 
 详细教程：[给你一个全自动的屏幕适配方案（基于SW方案）！—— 解放你和UI的双手](http://tangpj.com/2018/09/29/calces-screen/)
+
+## Kotlin函数式编程Demo
+
+### 简介
+
+Kotlin函数式编程Demo
+
+博客地址：
+
+使用指南：大部分例子的文件里面都有main方法，main方法里面对应的就是对应的类的使用演示教程（可以把main看作是客户端）。所以对感兴趣的例子直接运行对应的类里面的mian方法就行。
+
+请使用Intellij打开
 
